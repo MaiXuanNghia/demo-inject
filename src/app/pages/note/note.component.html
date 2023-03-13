@@ -1,1 +1,27 @@
-<p>note works!</p>
+<div class="button-wrapper">
+    <button (click)="getAllData()">Refetch</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Detail</th>
+            <th>Date Created</th>
+            <th class="action-header">Action</th>        
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let note of data$ | async">
+            <td>{{note.id}}</td>
+            <td>{{note.title}}</td>
+            <td>{{note.detail}}</td>
+            <td>{{note.date}}</td>
+            <td>
+                <div class="action-wrapper">
+                    <button>Delete</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

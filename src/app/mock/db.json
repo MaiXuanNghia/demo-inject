@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Demo Inject",
+      "completed": true,
+      "dueDate": "03/13/2023"
+    },
+    {
+      "id": 2,
+      "title": "Demo Inject",
+      "completed": false,
+      "dueDate": "03/14/2023"
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "title": "Demo Inject",
+      "detail": "Cupidatat incididunt incididunt Lorem do ex Lorem.",
+      "date": "03/13/2023"
+    }
+  ]
+}

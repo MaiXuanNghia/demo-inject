@@ -1,3 +1,38 @@
 :host {
   display: block;
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+
+  table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    width: 200px;
+    text-align: right;
+    padding: 10px 20px;
+  }
+
+  .action {
+    &-header {
+      text-align: center;
+    }
+
+    &-wrapper {
+      display: flex;
+      gap: 5px;
+      margin: auto;
+      justify-content: center;
+    }
+  }
+
+  .button-wrapper {
+    margin-left: 90%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 5px;
+  }
 }

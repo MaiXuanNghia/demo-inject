@@ -1,1 +1,41 @@
-<p>todo works!</p>
+<div class="button-wrapper">
+    <button>Create</button>
+    <button (click)="refetch()">Refetch</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Is Completed</th>
+            <th>Due Date</th>
+            <th class="action-header">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><input type="text" placeholder="title" /></td>
+            <td><input type="checkbox" placeholder="completed" /></td>
+            <td><input type="date" placeholder="dueDate" /></td>
+            <td>
+                <div class="action-wrapper">
+                    <button>Save</button>
+                    <button>Cancel</button>
+                </div>
+            </td>
+        </tr>
+        <tr *ngFor="let todo of data$ | async">
+            <td>{{todo.id}}</td>
+            <td>{{todo.title}}</td>
+            <td>{{todo.completed}}</td>
+            <td>{{todo.dueDate}}</td>
+            <td>
+                <div class="action-wrapper">
+                    <button>Edit</button>
+                    <button (click)="deleteItem(todo.id)">Delete</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
